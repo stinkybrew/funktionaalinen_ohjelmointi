@@ -14,8 +14,8 @@
               return (false);
           }
          // perussilmukka
-          //return n * fact(n - 1);
+          return n * fact(n - 1);
         }
-        var tulos = fact("gfdgfd");
+        var tulos = fact("imaamieeee");
         console.log(tulos);
         
