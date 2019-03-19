@@ -20,5 +20,5 @@ function sty(p, q) {
     //return q -1;
     return q * sty(q, p - 1);
 }
-var Q = sty(4, 6);
+var Q = sty(4, 2);
 console.log(Q)
