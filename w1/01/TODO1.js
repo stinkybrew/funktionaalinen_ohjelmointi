@@ -6,16 +6,19 @@
         //palauta sama totuusarvo, jonka rekursiivinen kutsukin palautti.
     
     function fact(n) {
-        // triviaalitapaus
-          if (n.length === 0 || 1) {
-            return (true);
-          }
-          else if (n.charAt(0) !== n.charAt(-1)) {
-              return (false);
-          }
-         // perussilmukka
-          return n * fact(n - 1);
-        }
-        var tulos = fact("imaamieeee");
-        console.log(tulos);
+      console.log(n);
+      // triviaalitapaus
+      if (n.length  <= 1) {
+        return (true);
+      }
+      else if (n.charAt(0) !== n.charAt(n.length-1)) {
+        return (false);
+      }
+      // perussilmukka
+      console.log(n);
+      return fact(n.substring(n.length-1, 1));
+    }
+    var tulos = fact("sokos");
+    console.log(tulos);
+    //console.log(fact(n));
         
