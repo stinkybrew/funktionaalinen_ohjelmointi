@@ -10,15 +10,13 @@
 } */
 
 function sty(p, q) {
-    console.log(q);
+    console.log(p, q);
     if (q === 0){
         return (p);
     }
-    else if (q == p%q) {
-        return true;
+    else {
+        return sty(q, p%q);
     }
-    //return q -1;
-    return q * sty(q, p - 1);
 }
-var Q = sty(4, 2);
-console.log(Q)
+var Q = sty(48, 60);
+console.log(Q);
