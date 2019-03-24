@@ -29,7 +29,9 @@ for(var i=0 ; i<v2015.length ;) {
 }
 
 function f(v2015, v2016, tulos, func){
-    var tulos = func(v15, v16);
+    if (tulos === -1) {
+        
+    }
     if (v2015[11]) {
         return (true);
     }
@@ -41,12 +43,6 @@ function f(v2015, v2016, tulos, func){
     
     return func(v2015[i]+1,v2015[i]+1);
 }
-
-
-
-
-
-
 
 
 /*
