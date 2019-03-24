@@ -15,7 +15,7 @@ const func = function(x, y) {
         }   
     }();
 }
-const f = function( func, v15, v16){
+const f = function( tulos, v15, v16){
     if (tulos === -1) {
         console.log(v15+" is colder that "+v16);
     }
