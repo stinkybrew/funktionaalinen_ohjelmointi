@@ -1,16 +1,16 @@
 
 function sty(p, q) {
     console.log(p, q);
-    if (p === 0){
+    if (p%q === 0){
         console.log("jaollisia");
         return (true);
     }
-    else if (q === 1) {
+    else if (p%q === 1) {
         console.log("jaoton")
         return(false);
     }
     else {
-        return sty(q, p%q);
+        return sty(q, p^q-1);
     }
 }
 var Q = sty(35, 8);
