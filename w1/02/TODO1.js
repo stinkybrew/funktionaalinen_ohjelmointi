@@ -3,11 +3,11 @@
 const func = function (x, y) {
     return function () {
         if (x > y){
-            console.log(x+" is bigger that "+y);
+            console.log(x+" is bigger than "+y);
             return (1);
         }
         else if (x < y) {
-            console.log(x+" is smaller that "+y);
+            console.log(x+" is smaller than "+y);
             return(-1);
         }
         else {

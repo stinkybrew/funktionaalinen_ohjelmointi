@@ -15,7 +15,7 @@ const func = function(x, y) {
         }   
     }();
 }
-const f = function( tulos, v15, v16){
+const f = function( tulos, v15, v16, x, y){
     if (tulos === -1) {
         console.log(v15+" is colder that "+v16);
     }
@@ -23,7 +23,7 @@ const f = function( tulos, v15, v16){
         console.log(v15+" is warmer that "+v16);
     }
     else  {
-        console.log(v15+" and "+v16+" temperaters are the same" );
+        console.log(v15+" and "+v16+" temperatures are the same" );
     }
     // perussilmukka
 
