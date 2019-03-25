@@ -13,21 +13,19 @@ const func = function(x, y) {
         }   
     }();
 }
-const f = function( tulos, v15, v16, x, y){
+const f = function(tulos, v15, v16){
     if (tulos === -1) {
-        console.log(v15+" is colder that "+v16);
+        console.log(v15+" is colder than "+v16);
     }
     else if (tulos === 1) {
-        console.log(v15+" is warmer that "+v16);
+        console.log(v15+" is warmer than "+v16);
     }
     else  {
         console.log(v15+" and "+v16+" temperatures are the same" );
     }
-    // perussilmukka
-
+    return (v15, v16);
     //var tulos = f(func(v15, v16));
     //console.log(tulos); 
-    return (v15, v16);
     //return func(v2015[i]+1,v2015[i]+1);
 }
 var v2015 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
