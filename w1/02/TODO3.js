@@ -16,6 +16,11 @@ const pipeline  = [   // 2D-muunnoksia
     },
 ];
 
+/*
+x' = x*cos(phi) - y*sin(phi)
+    
+y' = x*sin(phi) + y*cos(phi)
+*/
 
 function muunnos(point){
      for(let i=0; i<pipeline.length; i++){   
