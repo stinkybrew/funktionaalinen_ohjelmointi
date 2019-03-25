@@ -3,15 +3,13 @@
 const func = function(x, y) {
     return function () {
         if (x > y){
-            //console.log(x+" is bigger that "+y);
-            return (1); 
+            return (1); // x is warmer that y 
         }
         else if (x < y) {
-            //console.log(x+" is smaller that "+y);
-            return(-1);
+            return(-1); // x is colder that y
         }
         else {
-            return (0);
+            return (0); // temps are equal
         }   
     }();
 }
