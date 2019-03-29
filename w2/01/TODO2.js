@@ -12,7 +12,7 @@ const map1 = function(arr1) {
 var arr1 = ('C:/Users/wille/tmp/testi/funktionaalinen_ohjelmointi/w2/01/movies.js');
 var list=[];
 var tulos = (map1(arr1));
-console.log(map.tulos);
+console.log(map. tulos);
 /*
 const func = function(x, y) {
     return function () {
