@@ -59,12 +59,12 @@ var moviez = [
 	 //11
 
 	var kiku = function(moviez) {
-		return function {
+		return function (){
 		var arr1 = [];
-		
-		arr1.push(moviez);
+		var l = arr1.map(moviez => {json.parse(moviez) + "X"});
+		arr1.push(l);
 		return arr1;
-		}
+		}();
 	};
 	console.log(moviez.map(kiku));
 

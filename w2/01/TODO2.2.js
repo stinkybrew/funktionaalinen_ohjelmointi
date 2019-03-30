@@ -2,7 +2,7 @@
 
 
 // pass a function to map
-const map1 = arr1.map(x, y => {json.parse(x, y) + "X")};
+const map1 = arr1.map(x, y => {json.parse(x, y) + "X"});
 list.push({titke:i, key: x});
 const map1 = function(arr1) {
 
