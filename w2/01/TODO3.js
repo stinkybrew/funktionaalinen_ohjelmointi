@@ -58,13 +58,12 @@ var moviez = [
 
 	 //11
 
-	function newmovies(item,currentIndex) {
-		var newlist = [item.title,item.release]; //This is new JSON list without "director"
+	function newmovies(item,index) {
+		var newlist = [item.title,item.release];
 		return newlist;
 	}
 	console.log(moviez.map(newmovies));
 
-	
 	
 	/*var kiku = () => {
 		return function (moviez) {
