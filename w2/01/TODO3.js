@@ -79,14 +79,14 @@ console.log(" ");
 let baalist = [];
 const result2 = moviez.filter(moviez => moviez.release > 2011);  // here we seperate older movies from list.
 //console.log(result2); // prints object's
-
 var lizt = [];
-for (var i = 0; i < result2.length; i += 1) {
-	var l = " " + result2.map(nmovies).slice(i, i + 1);  // This in normal strings type
+for (var i = 0; i < result2.length; i+=1) {
+	var l = " " + result2.map(nmovies).slice(i, i+1);  // This in normal strings type
 	lizt.push(l); // push to lizt
 }
 console.log(lizt);
 console.log(" ");
+
 
 
 /*
