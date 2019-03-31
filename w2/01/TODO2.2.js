@@ -27,7 +27,19 @@ const fetch = function(x, y) {
 var getJson = [];
 var moviez = ('movies.js');
 */
-//import "movies.js";
+//import "movies.js"; 
+/*
+fetch('kalevala.txt')
+  .then(response => response.text())
+  .then(text => console.log(text)) 
+*/
+fetch('kalevala.txt')
+  .then(function(response) {
+    console.log(response);
+    return response.txt();
+  })
+  // outputs the content of the text file
+/*
 import {t} from "movies.js";
 console.log(t());
 /*

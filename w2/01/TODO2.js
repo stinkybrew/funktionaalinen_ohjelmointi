@@ -57,37 +57,14 @@ var moviez = [
  	];	 
 
 	 //11
-
-	function newmovies(item,currentIndex) {
+	for (var i = 0; i < moviez.length; i += 1) {
+		console.log(" " + moviez.map(newmovies).slice(i, i + 1));  // This in normal as normal strings
+	}
+	
+	function newmovies(item) {
 		var newlist = [item.title,item.release]; //This is new JSON list without "director"
 		return newlist;
 	}
 	console.log(moviez.map(newmovies));
 
 	
-	
-	/*var kiku = () => {
-		return function (moviez) {
-		delete data.result[1];
-		var arr1 = [];
-		//var l = arr1.map(moviez => {json.parse(moviez) + "X"});
-		arr1.push(moviez);
-		return arr1;
-		}();
-	};
-	
-
-	/*Array.prototype.map = function(f) {
-		var res = [];
-		this.forEach(function(itemInArray) {
-		res.push(f(itemInArray));
-		});
-		return res;
-	};
-	console.log(moviez.map(i => i));
-	//console.log([1, 2, 3].map(i => i * i));
-
-	/*var total = shoppingCart.map((moviez) => {
-		return prev + curr.qty * curr.price * 0.9;
-	},0);
-	*/
