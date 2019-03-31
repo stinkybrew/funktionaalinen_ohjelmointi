@@ -1,26 +1,21 @@
 "use strict"
-const func = (x, y) => {             // Tämä laskee kuukausittaiset keskiarvot.
+const func = (x, y) => {                   // Tämä laskee kuukausittaiset keskiarvot.
     var l = [];
     for(var i=0 ; i<x.length ;) {
         console.log("Annetutu arvot: " + x[i] + " ja " + y[i] + ", ");
         var keskiarvo = (x[i]+y[i])/2;
         console.log("ja niiden keskiarvo = " + keskiarvo);
-        if (keskiarvo <= 0) {        // Tämä katsoo mitkä ovat arvoltaan suurempia kuin 0.
-            console.log("ERROR! " + keskiarvo + " ei ole positiivinen arvo!");
-            i++               
-        }
-        else {
-            l.push(keskiarvo);
-            i++ 
-        }
+        l.push(keskiarvo);
+        i++
     };
-    return (l);
+    const positive = l.filter(l => l > 0); // Tämä katsoo mitkä ovat arvoltaan suurempia kuin 0.
+    return (positive);
 };
 
 const f = (list, tulos) => {
     const reducer = (tulos, currentValue) => tulos + currentValue;
     var list2 = (tulos.reduce(reducer)) / tulos.length;
-    var list = [list2];              //positiivisten laskettujen keskiarvojen keskiarvo !!!
+    var list = [list2];                   //positiivisten laskettujen keskiarvojen keskiarvo !!!
     return list;
 };
 var list = [];
