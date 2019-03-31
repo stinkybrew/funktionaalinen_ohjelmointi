@@ -2,20 +2,15 @@
 
 
 // pass a function to map
-const map1 = arr1.map(x, y => {json.parse(x, y) + "X"});
-list.push({titke:i, key: x});
-const map1 = function(arr1) {
 
-    //var list1 = arr1.map((v, i) => v + i);
-    //console.log(list1);
-    return list1; 
-}
-var arr1 = ('C:/Users/wille/tmp/testi/funktionaalinen_ohjelmointi/w2/01/movies.js');
-var list=[];
+//var moviez = require('C:/Users/wille/tmp/testi/funktionaalinen_ohjelmointi/w2/01/movies.js');
+//var imported.src = 'C:/Users/wille/tmp/testi/funktionaalinen_ohjelmointi/w2/01/movies.js';
+
+/*var list=[];
 var tulos = (map1(arr1));
 console.log(tulos);
-/*
-const func = function(x, y) {
+
+const fetch = function(x, y) {
     return function () {
         if (x > y){
             return (1); // x is warmer that y 
@@ -28,6 +23,21 @@ const func = function(x, y) {
         }   
     }();
 }
+
+var getJson = [];
+var moviez = ('movies.js');
 */
-console.log(arr1.map((x,i) => (
-    {list.push({titke:i, key: x} ) );
+//import "movies.js";
+import {t} from "movies.js";
+console.log(t());
+/*
+fetch('/kalevala.txt')
+  .then(response => response.text())
+  .then(text => console.log(text))
+  // outputs the content of the text file
+/*
+function newmovies(item,index) {
+	var newlist = [item.title,item.release];
+	return newlist;
+}
+console.log(moviez.map(newmovies)); */
