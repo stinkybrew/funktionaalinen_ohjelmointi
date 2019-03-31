@@ -58,35 +58,14 @@ var moviez = [
 
 	 //11
 
-	function newmovies(item,index) {
-		var newlist = [item.title,item.release];
-		return newlist;
-	}
-	console.log(moviez.map(newmovies));
+function newmovies(item,index) {
+	var newlist = [item.title,item.release];
+	return newlist;
+}
+console.log(moviez.map(newmovies));
 
-	
-	/*var kiku = () => {
-		return function (moviez) {
-		delete data.result[1];
-		var arr1 = [];
-		//var l = arr1.map(moviez => {json.parse(moviez) + "X"});
-		arr1.push(moviez);
-		return arr1;
-		}();
-	};
-	
 
-	/*Array.prototype.map = function(f) {
-		var res = [];
-		this.forEach(function(itemInArray) {
-		res.push(f(itemInArray));
-		});
-		return res;
-	};
-	console.log(moviez.map(i => i));
-	//console.log([1, 2, 3].map(i => i * i));
+const result = moviez.filter(moviez => moviez.release > 2011);
 
-	/*var total = shoppingCart.map((moviez) => {
-		return prev + curr.qty * curr.price * 0.9;
-	},0);
-	*/
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
