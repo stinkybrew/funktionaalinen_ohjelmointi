@@ -1,18 +1,21 @@
 "use strict"
+var i = 0;
 const func = (v2015, v2016) => {                   // Tämä laskee kuukausittaiset keskiarvot.    
-    var i = 0
     if (i<v2015.length) {
-        console.log("TESTI!!!");
-        var keskiarvo = v2015.map((x,i) => (x + v2016[i])/2);
+        console.log("TESTI!!!" + i);
+        var keskiarvo = v2015.map((x) => (x + v2016[i])/2);
+       
         //console.log(keskiarvo);  // TOIMII!
         //var keskiarvo = (x[i]+y[i])/2;
         i++
         const positive = keskiarvo.filter(x => x > 0); // Tämä katsoo mitkä ovat arvoltaan suurempia kuin 0.
         //console.log(positive);  // TOIMII!
-        return func(positive);
+        return func(v2015, v2016);
     }
     else {
+        i = 0
         console.log("testiiii2222");
+        return positive;
     }
 }
 
