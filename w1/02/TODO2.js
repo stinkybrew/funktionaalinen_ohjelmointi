@@ -1,20 +1,23 @@
 'use strict'
 
-const func = function(x, y) {
-    return function () {
-        if (x > y){
-            return (1); // x is warmer that y 
-        }
-        else if (x < y) {
-            return(-1); // x is colder that y
+const func = function() {
+    return function (x, y) {
+        var i = 0
+        if (i<x.length) {
+            counttemp = count;
+            if (x[i]<y[i]) {
+                count++
+            }
+            i++
+            return func(x, y);
         }
         else {
-            return (0); // temps are equal
-        }   
-    }();
-}
+            i = 0; counter = 0; return countertemp;
+        }
+    }
+}();
 const f = function(list ,tulos, v15, v16){
-    
+    let list=[];
     if (tulos === -1) {
         console.log(v15+" is colder than "+v16);
         list[0]+tulos;
@@ -28,21 +31,37 @@ const f = function(list ,tulos, v15, v16){
         list[2]+tulos;
     }
     return (list, v15, v16);
-    // var tulos = f(func(v15, v16));
-    // console.log(tulos); 
-    // return func(v2015[i]+1,v2015[i]+1);
 }
-var v2015 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-var v2016 = [2, 3, 3, 2, 4, 5, 7, 9, 8, 10, 10, 13];
-for(var i=0 ; i<v2015.length ;) {
-    var v15 = v2015[i];
-    var v16 = v2016[i];
-    // console.log(tulos);
-    i++
-    var list=[];
-    var tulos = (func(v15, v16));
-    var tlz = (f(list ,tulos, v15, v16));
-    console.log(tulos);
-    console.timeLog(list);
-    // console.log(tlz); 
-}
+const v2015 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const v2016 = [2, 3, 3, 2, 4, 5, 7, 9, 8, 10, 10, 13];
+
+var i = 0;
+var count = 0;
+var counttemp;
+
+const tulos = (func(v2015, v2016));
+const tlz = (f(list ,tulos, v2015, v2016));
+console.log(tulos);
+console.timeLog(list); // THIS IS JUST FOR TESTING....
+
+
+/*
+const anon = function () {
+    return function (v2015,v2016) {
+        if(i<=v2015.length){
+        countertemp = counter;
+        if (v2015[i]<v2016[i]) {counter++;}
+        i++
+        return anon(v2015,v2016);
+        }
+        else{i = 0; counter = 0; return countertemp;}
+    }
+}();
+var i = 0;
+var counter = 0;
+var countertemp;
+let tulos = anon([0,0,0,0,0,0,0,0,0,0,0,0],[-22,-23,-16,-2,11,14,16,17,14,11,11,4]);
+console.log("Vuonna 2016 keskilämpötila oli " + tulos + " eri kuukautena korkeampi kuin vuonna 2015");
+tulos = anon([-20,-22,-15,-2,10,15,20,20,15,10,10,5],[-22,-23,-16,-2,11,14,16,17,14,11,11,4]);
+console.log("Vuonna 2016 keskilämpötila oli " + tulos + " eri kuukautena korkeampi kuin vuonna 2015");
+*/

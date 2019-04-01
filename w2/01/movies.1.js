@@ -1,4 +1,4 @@
-/* var moviez = [ 
+[ 
 		{ 
  			title: 'Harry Potter and the Deathly Hallows: Part 2', 
  			director: 'David Yates', 
@@ -54,17 +54,5 @@
  			director: 'Hayao Miyazaki', 
  			release: 2001 
  		} 
-];	 */
-    let moviez = require("./movies")
-	//11
-	for (var i = 0; i < moviez.length; i += 1) {
-		console.log(" " + moviez.map(newmovies).slice(i, i + 1));  // This in normal as normal strings
-	}
-	
-	function newmovies(item) {
-		var newlist = [item.title,item.release]; //This is new JSON list without "director"
-		return newlist;
-	}
-	console.log(moviez.map(newmovies));
-
-	
+ 	]	 
+ 
