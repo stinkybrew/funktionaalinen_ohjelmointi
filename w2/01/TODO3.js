@@ -2,24 +2,23 @@
 	 //11
 let moviez = require("./movies")
 var mlist = [];
-for (var i = 0; i < moviez.length; i += 1) {
-	var l = " " + moviez.map(nmovies).slice(i, i + 1);  // This in normal strings type
+for (let i = 0; i < moviez.length; i += 1) {
+	let l = " " + moviez.map(nmovies).slice(i, i + 1);  // This in normal strings type
 	mlist.push(l); // push to mlist
 }
 console.log(mlist);
 console.log(" ");
 
 function nmovies(item) {
-	var newlist = [item.title,item.release]; // Here i sepereate title and release from whole list
+	let newlist = [item.title,item.release]; // Here i sepereate title and release from whole list
 	return newlist;
 }
 let nmlist = [];
-var o = " " + moviez.map(nmovies); //  and another list testing
+let o = " " + moviez.map(nmovies); //  and another list testing
 nmlist.push(o);
 console.log(nmlist);
 console.log(" ");
 
-let baalist = [];
 const result2 = moviez.filter(moviez => moviez.release > 2011);  // here we seperate older movies from list.
 //console.log(result2); // prints object's
 var lizt = [];
