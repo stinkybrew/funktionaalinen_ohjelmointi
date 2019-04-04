@@ -18,5 +18,5 @@ const func = function (x, y) {
 }
 var rand1=Math.floor(Math.random() * 10);
 var rand2 =Math.floor(Math.random() * 10);
-var tulos = func(rand1, rand2);
+const tulos = func(rand1, rand2);
 console.log(tulos);

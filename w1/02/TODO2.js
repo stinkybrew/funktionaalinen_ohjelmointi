@@ -2,9 +2,10 @@
 
 const func = function() {
     return function (x, y) {
-        var i = 0
+        var count = 0;
+        let i = 0
         if (i<x.length) {
-            counttemp = count;
+            var counttemp = count;
             if (x[i]<y[i]) {
                 count++
             }
@@ -12,7 +13,7 @@ const func = function() {
             return func(x, y);
         }
         else {
-            i = 0; counter = 0; return countertemp;
+            i = 0; counter = 0; return counttemp;
         }
     }
 }();
@@ -35,9 +36,7 @@ const f = function(list ,tulos, v15, v16){
 const v2015 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const v2016 = [2, 3, 3, 2, 4, 5, 7, 9, 8, 10, 10, 13];
 
-var i = 0;
-var count = 0;
-var counttemp;
+
 
 const tulos = (func(v2015, v2016));
 const tlz = (f(list ,tulos, v2015, v2016));
