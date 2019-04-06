@@ -8,20 +8,12 @@ package todo1;
 import java.util.Arrays;
 import java.util.List;
 public class Todo1 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
-        List<String> values = Arrays.asList("1", "2", "3");
-        int sum = 0;
-        for(String item: values) {
-        sum += Integer.parseInt(item);
-        }
-        System.out.println("Sum = " + sum);
-        
-    }
     
+    public static void main(String[] args) {
+        List<String> values = Arrays.asList("1", "2", "3");
+        final int sum = values.stream()
+            .map(item -> Integer.parseInt(item))
+            .reduce(0, (a,b) -> a + b);
+        System.out.println("Sum = " + sum);
+    }
 }
