@@ -4,34 +4,29 @@
  * and open the template in the editor.
  */
 package todo1;
-
 @FunctionalInterface
 interface hihhuu { int lasku(int x, int y, int fahrenheit); }
-
-public class Todo1 {
+public class Todo11 {
     
-    public Todo1() {
+    public Fahrenheit Todo11(Fahrenheit fahrenheit) {
     		
 	        // lambda lauseke joka määrittää lasku method 
-	    	hihhuu toCelsius = (int x, int y, int fahrenheit)->(x/y)*(fahrenheit-32); 
+    	hihhuu toCelsius = (int fahrenheit)->(5/9)*(fahrenheit-32); 
 	        
 	        // parametrin palautustyypin on sama kuin prototyypissä !! Muista!
-	    	Void ans = toCelsius.lasku(a,b,c); 
-	        System.out.println(ans);
-	        //return ans;
+	        System.out.println(toCelsius);
+	        return toCelsius;
 	        
 	        hihhuuz	area = (double radius) -> (Math.PI * radius * radius);
 	        double rad = 6;
 	        double ans2 = area.lasku2(rad);
-    	
+	        return area;
     }
     int a = 5; int b = 9; int c = 35;
     double kek() {
-    	System.out.println(ans2);
+    	System.out.println(Fahreinheit);
     }
-    void print_text() {
-    	
-    }
+  
     /*
     double Ans;
     public Ans Todo1(Ans ans) {
