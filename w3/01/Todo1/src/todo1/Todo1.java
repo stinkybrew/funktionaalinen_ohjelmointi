@@ -4,16 +4,45 @@
  * and open the template in the editor.
  */
 package todo1;
-
 import java.util.Arrays;
 import java.util.List;
+
+@FunctionalInterface
+interface hihhuu { int lasku(int x, int y, int fahrenheit); }
+
 public class Todo1 {
     
-    public static void main(String[] args) {
-        List<String> values = Arrays.asList("1", "2", "3");
-        final int sum = values.stream()
-            .map(item -> Integer.parseInt(item))
-            .reduce(0, (a,b) -> a + b);
-        System.out.println("Sum = " + sum);
+    public void main(String[] args) {
+    	
+        // lambda lauseke joka määrittää lasku method 
+    	hihhuu toCelsius = (int x, int y, int fahrenheit)->(x/y)*(fahrenheit-32); 
+        
+        int a = 5; int b = 9; int c = 35;
+        // parametrin palautustyypin on sama kuin prototyypissä !! Muista!
+        int ans = toCelsius.lasku(a,b,c); 
+        System.out.println(ans);
+        //return ans;
+        
+        hihhuuz	area = (double radius) -> (Math.PI * radius * radius);
+        double rad = 6;
+        double ans2 = area.lasku2(rad);
+        System.out.println(ans2); 
     }
+    
 }
+
+
+/*
+toCelsius -> {return (5/9) * (fahrenheit-32)}
+area -> {return Math.PI * radius * radius}
+
+
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+}
+function area(radius)   
+    {  
+        return Math.PI * radius * radius;  
+    };  
+
+*/
