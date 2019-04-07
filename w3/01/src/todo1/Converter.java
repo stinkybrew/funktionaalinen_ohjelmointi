@@ -13,6 +13,7 @@ public class Converter {
     	int ans = toCelsius.lasku(fahrenheit); 
         System.out.println("Printed inside CONVERTER method: " + ans);
         return ans;
+      
     } 
     int fahrenheit = 45;
     
