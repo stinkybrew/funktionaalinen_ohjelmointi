@@ -1,7 +1,7 @@
 
 package todo1;
 
-//import CallableMethods.*;
+import CallableMethods.*;
 
 public class Todo1 {
     
@@ -15,10 +15,10 @@ public class Todo1 {
         Converter conv = new Converter();	// Kutsutaan metodit
         float valconv = conv.converter(fahrenheit);
         
-        // kutsuu: toCelsius = (floa f)->(5/9)*(fahrenheit-32); 
+        // kutsuu metodia Converter.java tiedostosta
         System.out.println("test print of fahrenheit to celsius: " + valconv);
         
-        // kutsuu: area = (double r) -> (Math.PI * radius * radius);
+        // kutsuu metodia Rads.java tiedostosta
         System.out.println("test print of radius calculations: " + valrad);
            
     }
