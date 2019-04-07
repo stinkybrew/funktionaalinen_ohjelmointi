@@ -29,6 +29,14 @@ public class PuttingIntoPractice{
                                                .collect(toList());
         System.out.println(tr2011);
         
+        // Query 1.2: Find all transactions from year 2011 and sort them by value (small to high).
+        List<Transaction> tr2012 = transactions.stream()
+                                               .filter(transaction -> transaction.getYear() > 2011)
+                                               .filter(transaction -> transaction.getValue() > 900)
+                                               .sorted(comparing(t -> t.getValue()))
+                                               .collect(toList());
+        System.out.println(tr2012);
+        
         // Query 2: What are all the unique cities where the traders work?
         List<String> cities = 
             transactions.stream()
