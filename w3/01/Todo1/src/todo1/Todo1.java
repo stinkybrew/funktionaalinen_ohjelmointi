@@ -11,13 +11,17 @@ interface hihhuu { int lasku(int fahrenheit); } // TESTING "FunctionalInterface"
 public class Todo1 {
     
     public void main(String[] args) {
-    	
+    	    int fahrenheit = 35;
+            double rad = 6;
+            System.out.println("test print of fahrenheit to celsius: " + converter(fahrenheit));
+            System.out.println("test print of radius calculations: " + rads(rad));
+           
     }
     	public int converter(int fahrenheit) {	
 	        // lambda lauseke joka maarittiaa lasku method 
 	    	hihhuu toCelsius = (int fahrenheitz)->(5/9)*(fahrenheit-32); 
 	        
-	        // parametrin palautustyypin on sama kuin prototyypissä !! Muista!
+	        // parametrin palautustyypin on sama kuin prototyypissï¿½ !! Muista!
 	    	int ans = toCelsius.lasku(fahrenheit); 
 	        System.out.println("Printed inside CONVERTER method: " + ans);
 	        return ans;
@@ -28,13 +32,5 @@ public class Todo1 {
             double ans2 = area.lasku2(radius);
             System.out.println("Printed inside RADS method: " + ans2);
             return ans2;
-        }
-    
-        double kek() {
-            int fahrenheit = 35;
-            double rad = 6;
-            System.out.println("test print of fahrenheit to celsius: " + converter(fahrenheit));
-            System.out.println("test print of radius calculations: " + rads(rad));
-            return fahrenheit + rad;
-        }
+        }  
 }
