@@ -2,17 +2,15 @@ package todo2;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
-
 import java.util.*;
 import streams.*;
 import menu.Dish;
 
 // Teht‰v‰nanto
 /* Etsi kaikki rahansiirrot (transaction), 
-jotka ovat tehty vuoden 2012 j‰lkeen ja joiden arvo on v‰hint‰‰n 900.
+jotka ovat tehty vuoden 2012 j‰lkeen ja joiden arvo on v‰hint‰‰n 900. */
 
-Laske eri ruokalajien m‰‰r‰ (Dish.java-tiedostossa on lueteltu ruokalajeja) 
-k‰ytt‰en map- ja reduce-operaatioita. */
+
 
 public class Todo2 {
 	
@@ -40,13 +38,23 @@ public class Todo2 {
                           .collect(toList());
         System.out.println(tr2012);
         
-        Dish dish = new Dish(List);		// Kutsutaan metodit
-        int valconv = dish.menu(fahrenheit);
+        
+        /*
+        Laske eri ruokalajien m‰‰r‰ (Dish.java-tiedostossa on lueteltu ruokalajeja) 
+        k‰ytt‰en map- ja reduce-operaatioita. */      
+
+        Dish stringList = new Dish();
+        string valrad = stringList.getName();
+        
+        Optional<Dish> k = stringList.stream()
+        		.map(item -> (item))
+        		.reduce((a,b) -> a );
+        		final int index = indexOf(k);
+        		System.out.println(index);
+       // Stream<Dish> stream = stringList.stream();
+      //  stream
+        //    .map( element -> { System.out.println(element); });
 	}
-		
-	
-	/*
-    Converter conv = new Converter();	// Kutsutaan metodit
-    float valconv = conv.converter(fahrenheit);
-    */
+
+	}
 }
