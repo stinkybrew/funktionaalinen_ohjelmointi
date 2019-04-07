@@ -5,6 +5,7 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.*;
 import streams.*;
+import menu.Dish;
 
 // Tehtävänanto
 /* Etsi kaikki rahansiirrot (transaction), 
@@ -33,13 +34,16 @@ public class Todo2 {
 		
         // Query 1.2: Find all transactions from year 2011 and sort them by value (small to high).
         List<Transaction> tr2012 = transactions.stream()
-                                               .filter(transaction -> transaction.getYear() > 2011)
-                                               .filter(transaction -> transaction.getValue() > 900)
-                                               .sorted(comparing(t -> t.getValue()))
-                                               .collect(toList());
+                          .filter(transaction -> transaction.getYear() > 2011)
+                          .filter(transaction -> transaction.getValue() > 900)
+                          .sorted(comparing(t -> t.getValue()))
+                          .collect(toList());
         System.out.println(tr2012);
+        
+        Dish dish = new Dish(List);		// Kutsutaan metodit
+        int valconv = dish.menu(fahrenheit);
 	}
-	
+		
 	
 	/*
     Converter conv = new Converter();	// Kutsutaan metodit
