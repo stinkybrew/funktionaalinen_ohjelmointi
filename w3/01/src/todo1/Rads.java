@@ -8,5 +8,5 @@ public class Rads {
         System.out.println("Printed inside RADS method: " + ans2);
         return ans2;
     }
-    double rad = 23;
+    
 }

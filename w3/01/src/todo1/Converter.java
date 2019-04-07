@@ -15,6 +15,6 @@ public class Converter {
         return ans;
       
     } 
-    int fahrenheit = 45;
+    
     
 }
