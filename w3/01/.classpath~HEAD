@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="Todo1/src/|Todo1/src/todo2/src/" kind="src" path=""/>
+	<classpathentry excluding="todo2/src/" kind="src" path="Todo1/src"/>
+	<classpathentry kind="src" path="Todo1/src/todo2/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
