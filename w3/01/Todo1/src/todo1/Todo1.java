@@ -10,21 +10,23 @@ interface hihhuu { int lasku(int fahrenheit); } // TESTING "FunctionalInterface"
 
 public class Todo1 {
     
-    public void main(int fahrenheit) {
+    public void main(String[] args) {
+    	
+    }
     	public int converter(int fahrenheit) {	
-	        // lambda lauseke joka mï¿½ï¿½rittï¿½ï¿½ lasku method 
+	        // lambda lauseke joka maarittiaa lasku method 
 	    	hihhuu toCelsius = (int fahrenheitz)->(5/9)*(fahrenheit-32); 
 	        
-	        // parametrin palautustyypin on sama kuin prototyypissï¿½ !! Muista!
+	        // parametrin palautustyypin on sama kuin prototyypissä !! Muista!
 	    	int ans = toCelsius.lasku(fahrenheit); 
-	        System.out.println(ans);
+	        System.out.println("Printed inside CONVERTER method: " + ans);
 	        return ans;
         }        
         public double rads(double radius) {
             hihhuuz	area = (double radiuz) -> (Math.PI * radius * radius);
 
             double ans2 = area.lasku2(radius);
-            System.out.println(ans2);
+            System.out.println("Printed inside RADS method: " + ans2);
             return ans2;
         }
     
