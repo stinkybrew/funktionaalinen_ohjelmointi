@@ -3,8 +3,12 @@ package todo2;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import java.util.*;
+import java.util.stream.Stream;
+
 import streams.*;
 import menu.Dish;
+import menu.Dish.Type;
+import menu.*;
 
 // Teht‰v‰nanto
 /* Etsi kaikki rahansiirrot (transaction), 
@@ -30,7 +34,6 @@ public class Todo2 {
             new Transaction(alan, 2012, 950)
         );
 		
-        // Query 1.2: Find all transactions from year 2011 and sort them by value (small to high).
         List<Transaction> tr2012 = transactions.stream()
                           .filter(transaction -> transaction.getYear() > 2011)
                           .filter(transaction -> transaction.getValue() > 900)
@@ -38,23 +41,28 @@ public class Todo2 {
                           .collect(toList());
         System.out.println(tr2012);
         
-        
+     
         /*
         Laske eri ruokalajien m‰‰r‰ (Dish.java-tiedostossa on lueteltu ruokalajeja) 
         k‰ytt‰en map- ja reduce-operaatioita. */      
-
-        Dish stringList = new Dish();
-        string valrad = stringList.getName();
         
-        Optional<Dish> k = stringList.stream()
-        		.map(item -> (item))
+      // Dish stringList = new Dish();
+      // Dish l = stringList.menu;
+           
+        List<Dish> k = Dish.menu; 
+        Optional<String> gg = k.stream()
+        		.map(item -> (item.getName()))
         		.reduce((a,b) -> a );
-        		final int index = indexOf(k);
-        		System.out.println(index);
-       // Stream<Dish> stream = stringList.stream();
-      //  stream
-        //    .map( element -> { System.out.println(element); });
+        System.out.println(gg);
+        
+     //  Stream<Dish> k = menu.stream
+        //		.map(item -> (item.getName()))
+        	//	.reduce((a,b) -> a.length );
+        		
+        	//	System.out.println(k);
+       
+       // int k = dishes.stream()
+        //	 .map(dishes -> (dishes))
 	}
 
-	}
 }
