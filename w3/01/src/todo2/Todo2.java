@@ -51,11 +51,16 @@ public class Todo2 {
         List<Dish> dishes = Dish.menu;   
         //List<Dish> k = dishes.map;
        // int y;
-        Optional<Type> collect1 = dishes.stream()
-        		.map(x -> x.getType()).collect(Collectors.toList()
-        		.reduce((a,b) -> a = b != null ? a : b));
+        int counter;
+        String collect1 = dishes.stream()
+        		.map(x -> x.getType())
+        		.reduce( (a, b) -> {if (a == b) {counter++;}});
         System.out.println(collect1);
         //collect1.ifPresent(System.out::println); 
         
+      /*  int result = users.stream()
+        		  .reduce(0, (partialAgeResult, user) -> partialAgeResult + user.getAge(), Integer::sum);
+        		assertThat(result).isEqualTo(65);
+	*/
 	}
 }
