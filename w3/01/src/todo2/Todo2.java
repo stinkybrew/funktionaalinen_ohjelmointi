@@ -3,16 +3,16 @@ package todo2;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import java.util.*;
-import java.util.stream.Stream;
 
 import streams.*;
 import menu.Dish;
 import menu.Dish.Type;
-import menu.*;
 
+import java.util.stream.Collectors;
 // Teht‰v‰nanto
 /* Etsi kaikki rahansiirrot (transaction), 
 jotka ovat tehty vuoden 2012 j‰lkeen ja joiden arvo on v‰hint‰‰n 900. */
+import java.util.stream.Stream;
 
 
 
@@ -46,23 +46,15 @@ public class Todo2 {
         Laske eri ruokalajien m‰‰r‰ (Dish.java-tiedostossa on lueteltu ruokalajeja) 
         k‰ytt‰en map- ja reduce-operaatioita. */      
         
-      // Dish stringList = new Dish();
-      // Dish l = stringList.menu;
-           
-        List<Dish> k = Dish.menu; 
-        Optional<String> gg = k.stream()
-        		.map(item -> (item.getName()))
-        		.reduce((a,b) -> a );
-        System.out.println(gg);
+        // WAY TO MAKE VOID TO PUBLIC: List<DishPublic> result = convertToStaffPublic(Dish);
         
-     //  Stream<Dish> k = menu.stream
-        //		.map(item -> (item.getName()))
-        	//	.reduce((a,b) -> a.length );
-        		
-        	//	System.out.println(k);
-       
-       // int k = dishes.stream()
-        //	 .map(dishes -> (dishes))
+        List<Dish> dishes = Dish.menu;   
+        //List<Dish> k = dishes.map;
+        Optional<Type> collect1 = dishes.stream()
+        		.map(x -> x.getType())
+        		.reduce((a,b) -> a == b ? a : b);
+        System.out.println(collect1);
+        collect1.ifPresent(System.out::println); 
+        
 	}
-
 }
