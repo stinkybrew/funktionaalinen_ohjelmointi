@@ -52,9 +52,9 @@ public class Todo2 {
         //List<Dish> k = dishes.map;
        // int y;
         int counter;
-        String collect1 = dishes.stream()
+        Stream<Dish> collect1 = dishes.stream()
         		.map(x -> x.getType())
-        		.reduce( (a, b) -> {if (a == b) {counter++;}});
+        		.reduce( (x, b) -> {if (x == b) {counter++;}});
         System.out.println(collect1);
         //collect1.ifPresent(System.out::println); 
         
