@@ -48,14 +48,31 @@ public class Todo2 {
         
         // WAY TO MAKE VOID TO PUBLIC: List<DishPublic> result = convertToStaffPublic(Dish);
         
-        List<Dish> dishes = Dish.menu;   
-        //List<Dish> k = dishes.map;
+          
+        //List<Dish> k = dishes.menu();
        // int y;
-        int counter;
-        Stream<Dish> collect1 = dishes.stream()
-        		.map(x -> x.getType())
-        		.reduce( (x, b) -> {if (x == b) {counter++;}});
+        int count;
+        List<Dish> menu = Dish.menu;
+        List<Type> type = menu.stream()
+        		.map(dish -> dish.getType())
+        		.reduce(0, (a,b) -> { 
+        			if(a == b) {
+        				count++;
+        			}
+        		});
+        		System.out.println("Number of types:" +
+        		type);
+        
+        /*
+        Type counter = null;
+        List<Dish> dishes = Dish.menu; 
+        List<Integer> collect1 = dishes.stream()
+        		.map(x -> (x.length()))
+        		.reduce(0,(a, b) -> a + b);
+        System.out.println(counter);
+        System.out.println(dishes);
         System.out.println(collect1);
+        */
         //collect1.ifPresent(System.out::println); 
         
       /*  int result = users.stream()
