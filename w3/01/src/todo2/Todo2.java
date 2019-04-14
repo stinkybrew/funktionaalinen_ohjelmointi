@@ -51,18 +51,40 @@ public class Todo2 {
           
         //List<Dish> k = dishes.menu();
        // int y;
-        int count;
-        List<Dish> menu = Dish.menu;
-        List<Type> type = menu.stream()
-        		.map(dish -> dish.getType())
-        		.reduce(0, (a,b) -> { 
-        			if(a == b) {
-        				count++;
-        			}
-        		});
-        		System.out.println("Number of types:" +
-        		type);
         
+  
+        
+        
+        List<Dish> menu = Dish.menu;
+        Set<Type> allTypes = new HashSet<>();
+        
+        List<Type> name = menu.stream()
+        		
+        		.map(i -> i.getType())
+        		.filter(n -> !allTypes.add(n)) //Set.add() returns false if the item was already in the set.
+        		
+        		.collect(Collectors.toList());
+        		
+        		System.out.println("Number of types:" +
+        		name + allTypes);
+        
+        		
+        /*	
+        		List<Employee> employees = new ArrayList<>();
+                employees.add(new Employee(1,"John","street 1,"));
+                employees.add(new Employee(2,"Frank","Nr. Cosmos,"));
+                employees.add(new Employee(3,"Danyy","street 101,Washington DC,"));
+                employees.add(new Employee(1,"John","street 1,"));
+                employees.add(new Employee(2,"Frank","Nr. Cosmos,"));
+                employees.stream().collect(Collectors.groupingBy(Function.identity(),
+                        Collectors.counting()))
+                        .entrySet().stream()
+                        .filter(e -> e.getValue() > 1L)
+                        .map(e -> e.getKey())
+                        .collect(Collectors.toList())
+                        .forEach(employee -> System.out.println(employee.getEmpId()+"==>"+employee.getEmpName()));		
+        */
+        		
         /*
         Type counter = null;
         List<Dish> dishes = Dish.menu; 
