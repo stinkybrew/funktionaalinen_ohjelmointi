@@ -1,6 +1,6 @@
 # functionalprog
 
-A Clojure library designed to ... well, that part is up to you.
+Week5 01 TODOs 1-5
 
 ## Usage
 
