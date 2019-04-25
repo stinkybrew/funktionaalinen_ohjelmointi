@@ -14,14 +14,20 @@
       (println(* x x))
 )  
 
+(defn karkausvuodet [pr] 
+  (= pr karkausvuosi?)
+)
+
 (ns lein-midje-proj.core-test
       (:use lein-midje-proj.core)
-      (:use  midje.sweet))
+      (:use  midje.sweet)
+)
   
   (facts "square tehtävä 4"
     (square 2) => 4
     (square 7) => 49
-    (square -3) => 9)
+    (square -3) => 9
+  )
   
   (tabular "karkausvuosi? tehtävä 5 "
     (fact
@@ -36,6 +42,7 @@
       12      true
       20      true
       15      false
-      1913    false)
+      1913    false
+  )
   
   
