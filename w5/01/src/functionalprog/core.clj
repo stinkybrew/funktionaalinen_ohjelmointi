@@ -15,9 +15,9 @@
   (str "Tervetuloa Tylypahkaan " name)
 )
 
-
-{:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}}
-(get ["a" {:name {:middle}} "c"] 1)
+(def m {:a 1 :b 2})
+(def names {:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}})
+(println (get ["a" {:name {:middle}} "c"] 1))
 
 
 (defn square [x]
