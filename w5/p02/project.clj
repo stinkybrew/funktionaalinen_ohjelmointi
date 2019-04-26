@@ -1,5 +1,5 @@
 
-	(defproject functionalprog "0.1.0-SNAPSHOT"
+	(defproject p02 "0.1.0-SNAPSHOT"
   	:description "An example of using Midje for unit testing."
   	:url "http://example.com/FIXME"
   	:license {:name "Eclipse Public License"
