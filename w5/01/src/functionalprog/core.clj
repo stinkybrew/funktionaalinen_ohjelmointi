@@ -12,10 +12,10 @@
   (println (* 2 5(+ 4))
   (println (+ 1 2 3 4 5))
 
-(fn [name] 
+((fn [name] 
   (str "Tervetuloa Tylypahkaan " name)
-)
-(% Wille)
+) "wille")
+
 
 (def m {:a 1 :b 2})
 
