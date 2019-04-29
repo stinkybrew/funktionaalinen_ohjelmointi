@@ -15,7 +15,7 @@
 )  
 
 (defn karkausvuodet [pr] 
-  (= pr karkausvuosi)
+  (= pr karkausvuosi?)
 )
 
 (ns lein-midje-proj.core-test
