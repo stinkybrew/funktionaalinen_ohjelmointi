@@ -8,23 +8,28 @@
   [x]
   [name]
   (println x "Hello, World!"))
-  (println (* 2 5(+ 4)))
-  (println (+ 1 2 3 4 5)))
+
+  (println (* 2 5(+ 4))
+  (println (+ 1 2 3 4 5))
 
 (fn [name] 
   (str "Tervetuloa Tylypahkaan " name)
 )
+(% Wille)
 
 (def m {:a 1 :b 2})
+
 (def names {:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}})
+
 (println (get ["a" {:name {:middle}} "c"] 1))
 
 (-> {:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}} :name :middle)
 
 
 (defn square [x]
-  (println(* x x))
+  (* x x)
 )
+(square 2)
 
 
 
