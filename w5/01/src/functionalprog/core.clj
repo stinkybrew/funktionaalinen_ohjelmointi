@@ -19,6 +19,8 @@
 (def names {:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}})
 (println (get ["a" {:name {:middle}} "c"] 1))
 
+(-> {:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}} :name :middle)
+
 
 (defn square [x]
   (println(* x x))
