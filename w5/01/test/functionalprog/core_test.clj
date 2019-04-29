@@ -1,6 +1,11 @@
 (:use projekti.core)
 (:use  midje.sweet))
 
+(ns lein-midje-proj.core-test
+      (:use lein-midje-proj.core)
+      (:use  midje.sweet)
+)
+
 (ns functionalprog.core-test
   (:require [clojure.test :refer :all]
             [functionalprog.core :refer :all]))
@@ -9,27 +14,25 @@
   (testing "FIXME, I fail."
     (is (= 0 1))))
 
-
+"T4"
 (defn square [x]
       (* x x)
 )  
 (square 2)
 
+(facts "square tehtävä 4"
+    (square 2) => 4
+    (square 7) => 49
+    (square -3) => 9
+)
+
+"T5"
 (defn karkausvuodet [pr] 
   (= pr karkausvuosi?)
 )
 (karkausvuodet 200)
-
-(ns lein-midje-proj.core-test
-      (:use lein-midje-proj.core)
-      (:use  midje.sweet)
-)
   
-  (facts "square tehtävä 4"
-    (square 2) => 4
-    (square 7) => 49
-    (square -3) => 9
-  )
+
   
   (tabular "karkausvuosi? tehtävä 5 "
     (fact

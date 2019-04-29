@@ -18,6 +18,7 @@
 
 
 (def m {:a 1 :b 2})
+(m)
 
 (def names {:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}})
 
