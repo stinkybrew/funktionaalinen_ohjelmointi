@@ -11,12 +11,14 @@
 
 
 (defn square [x]
-      (println(* x x))
+      (* x x)
 )  
+(square 2)
 
 (defn karkausvuodet [pr] 
   (= pr karkausvuosi?)
 )
+(karkausvuodet 200)
 
 (ns lein-midje-proj.core-test
       (:use lein-midje-proj.core)
