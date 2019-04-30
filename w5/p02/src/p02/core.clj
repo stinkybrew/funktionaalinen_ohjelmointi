@@ -3,7 +3,6 @@
 
 ;Kirjoita ohjelma (funktio), joka kysyy sinulta yhden luvun (> 0) ja kertoo, onko luku parillinen. Jos luku on <= 0, 
 ;ohjelma tulostaa virheilmoituksen. Merkkijonosyötteen (read-line) voi muuttaa kokonaisluvuksi operaattorilla Integer., esim. (Integer. "2")
-
 (println "Anna luku joka on suurempi kuin 0")
 (defn vertailu
 [luku] ; parametrina saatu arvo
