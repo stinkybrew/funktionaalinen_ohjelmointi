@@ -56,7 +56,7 @@
    ; palauta sama luku, jonka rekursiivinen kutsukin palautti.
 ;}
 (defn jj [p q]
-  (println (str "testi tulostus " q " " p))
+  (println (str "arvot " q " " p))
   (if (= q 0)
     p
     (if (= (/ q p) 0) 
