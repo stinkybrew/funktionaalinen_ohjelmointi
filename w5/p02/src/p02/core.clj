@@ -58,8 +58,8 @@
 (defn jj [p q]
   (println (str "arvot " q " " p))
   (if (= q 0)
-    p
+  (println (str "yhteinen tekijä on:  " p ))
     (if (= (/ q p) 0) 
-      (println (str "yhteinen tekijä on:  " q )) (recur q (- p 1))
+      "  " (recur q (- p 1))
       )))
 (jj 102 77)
