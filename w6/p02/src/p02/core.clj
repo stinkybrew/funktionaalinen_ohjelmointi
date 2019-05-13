@@ -59,7 +59,7 @@
     (dissoc db key)
   )
   
-  (poistakannasta vampire-database 2)
+  (poistakannasta vampire-database 3)
   
   ; T5
   (def simaa 
