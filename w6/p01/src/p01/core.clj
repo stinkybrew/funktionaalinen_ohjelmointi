@@ -1,6 +1,7 @@
 (ns p01.core
   (:gen-class))
 
+
 ; T1
 ;(def vuodet
 ;  [{:vuosi 2015 :tammi -9 :helmi -16 :maalis -4 :huhti 5 :touko 12 :kesä 16 :heinä 21 :elo 22 :syys 16 :loka 8 :marras 1 :joulu -5}
@@ -18,6 +19,7 @@
 (println (str "2015 ja 2016 vuosien kuukausittaiset positiiviset lämpökeskiarvot: "))
 (averagetemp [-9 -16 -4 5 12 16 21 22 16 8 1 -5 -11 -10 -3 10 15 19 20 15 7 2 -2 -10])
 
+
 ; T2
 (defn food-journal1
     [{:kk 3 :paiva 1 :neste 5.3 :vesi 2.0}
@@ -32,9 +34,8 @@
 (defn lasku 
      (map (fn [x] (if (= (get x :kk) 4) (:kk (get x :kk) :paiva :neste ))) food-journal1))
      
-; T3
-; EI OLE AIVAN VALMIS!
 
+; T3
 (def food-journal2
   [{:kk 4 :paiva 5 :muuneste 3.0}
    {:kk 4 :paiva 10 :muuneste 1.7}
