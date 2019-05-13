@@ -30,7 +30,7 @@
      {:kk 4 :paiva 30 :neste 3.7 :vesi 1.0}])
 
 (defn lasku 
-     (map (fn [x] (if (= (get x :kk) 4) (:kk (get x :kk) :paiva :neste )))))
+     (map (fn [x] (if (= (get x :kk) 4) (:kk (get x :kk) :paiva :neste ))) food-journal1))
      
 ; T3
 ; EI OLE AIVAN VALMIS!
@@ -45,5 +45,5 @@
 (defn rakenne (into [] 
   (keep 
     (fn [x] 
-      (if (= (get x :kk) 4) (:kk (get x :kk) :paiva (get x :paiva) :muuneste ))))))
+      (if (= (get x :kk) 4) (:kk (get x :kk) :paiva (get x :paiva) :muuneste ))) food-journal2)))
 (pritln rakenne)
