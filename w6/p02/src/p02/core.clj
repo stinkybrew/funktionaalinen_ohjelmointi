@@ -8,24 +8,22 @@
     )
     
     (def muod 
-        (partial addStyle "Terveisin "
+        (partial addStyle "Ystävällisin terveisin, "
         )
     )
     
     (def epamuod 
-        (partial addStyle "Se o moro, "
+        (partial addStyle "Se on tere, "
         )
     )
     
     (def engmuod 
-        (partial addStyle 
-                 "Best regards, "
+        (partial addStyle "Best regards, "
         )
     )
     
     (def engepamuod
-        (partial addStyle 
-                 "Eat my shorts, "
+        (partial addStyle "Hi there, "
         )
     )
   
