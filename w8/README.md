@@ -1,2 +1,0 @@
-# testi
-Assignments week2
