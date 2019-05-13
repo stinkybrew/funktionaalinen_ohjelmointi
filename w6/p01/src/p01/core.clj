@@ -38,7 +38,8 @@
 )
 
 (def minimivektori
-  (vec (mini vektor))
+  (vec (mini vektor)
+  )
 )
 
 ; T3
@@ -60,5 +61,18 @@
   (dissoc db key)
 )
 
-(poistakannasta vampire-database 2
-)
+(poistakannasta vampire-database 2)
+
+; T5
+(def simaa 
+  [{:aine "Vesi", :yksikko "litraa", :maara 4}
+  {:aine "Sokeri", :yksikko "grammaa", :maara 500}
+  {:aine "Sitruuna", :yksikko "kpl", :maara 2}
+  {:aine "Hiiva", :yksikko "grammaa", :maara 1}])
+
+(defn kerrat
+  [arvo kerroin]
+  (* arvo kerroin))
+
+(def uusiresepti (map #(update % :maara kerrat 3) omasima))
+(println uusiresepti)
