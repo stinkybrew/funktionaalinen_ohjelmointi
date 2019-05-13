@@ -82,6 +82,7 @@
               pegged-board
               [connect-right connect-down-left connect-down-right])))
   
+  ; T2
   (defn new-board
     [rows]
     (let [initial-board {:rows rows}
@@ -89,6 +90,13 @@
       (reduce (fn [board pos] (add-pos board max-pos pos))
               initial-board
               (range 1 (inc max-pos)))))
+
+  ; Tutki, minkälainen tietorakenne syntyy:
+  ; new-board functio rakentaa uuden pelilaudan, joka saa reducen avulla rakennettua laudan käyttäen annettuja arvoja. 
+  ; Itse tietorakenne tulee olemaan tyyliin,  [{:a 0}{:b 0 :c 0}{:d 0 :e 0 :f 0}{:g 0 :h 0 :i 0 :j 0}{:k 0 :l 0 :m 0 :n 0 :o 0}],
+  ; riippuen tietenkin annetusta rivien määrästä.
+
+
   ;;;;
   ;; Move pegs
   ;;;;
@@ -263,15 +271,6 @@
         (if (>= rows 5) (prompt-empty-peg board) (recur (rows()))
       )))
   
-  ; T2
-  (defn new-board
-    [rows]
-    (let [initial-board {:rows rows}
-          max-pos (row-tri rows)]
-      (reduce (fn [board pos] (add-pos board max-pos pos))
-          initial-board
-          (range 1 (inc max-pos)))))
-  ;
   
   (defn -main
     [& args]
