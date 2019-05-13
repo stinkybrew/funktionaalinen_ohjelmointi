@@ -15,7 +15,7 @@
   [numbers]
   (map #(% (filter pos? numbers)) [average]))
   
-(println (str "2015 ja 2016 vuosien kuukausittaiset positiiviset keskiarvo: "))
+(println (str "2015 ja 2016 vuosien kuukausittaiset positiiviset lämpökeskiarvot: "))
 (averagetemp [-9 -16 -4 5 12 16 21 22 16 8 1 -5 -11 -10 -3 10 15 19 20 15 7 2 -2 -10])
 
 ; T2
