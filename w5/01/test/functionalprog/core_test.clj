@@ -14,17 +14,6 @@
   (testing "FIXME, I fail."
     (is (= 0 1))))
 
-"T4"
-(defn square [x]
-      (* x x)
-)  
-(square 2)
-
-(facts "square tehtävä 4"
-    (square 2) => 4
-    (square 7) => 49
-    (square -3) => 9
-)
 
 "T5"
 (defn karkausvuodet [pr] 
