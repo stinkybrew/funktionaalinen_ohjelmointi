@@ -260,8 +260,8 @@
     (println "How many rows? [5]")
     (let [rows (Integer. (get-input 5))
           board (new-board rows)]
-        (if (< rows 5) "Board must be larger that 4 rows!"
-      (prompt-empty-peg board))))
+        (if (>= rows 5) (prompt-empty-peg board) (recur (rows()))
+      )))
   
   ; T2
   (defn new-board
