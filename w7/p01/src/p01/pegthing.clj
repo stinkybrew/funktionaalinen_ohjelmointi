@@ -7,6 +7,13 @@
   ;;;;
   ;; Create the board
   ;;;;
+
+  ; T3
+  ;(take 6 tri) hakee luvun kolmioluvun (21)
+  ;(last (take 6 tri)) ottaa kolmioluvun (21) rivin 6 lopusta.
+  ;row-tria käytetään pelin kolmion koon määrittämiseen.
+  ;Esimerkiksi lukua 6 käytettäessä kolmioluku 21 olisi laudan viimeinen numero ja nappien kokonaismäärä
+
   (defn tri*
     "Generates lazy sequence of triangular numbers"
     ([] (tri* 0 1))
