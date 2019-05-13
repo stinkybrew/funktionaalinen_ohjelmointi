@@ -36,9 +36,9 @@
     [vektori]
     (map #(apply min %) vektori)
   )
-  
+
   (def minimivektori
-    (vec (mini vektor)
+    (vec (mini vektori)
     )
   )
   
