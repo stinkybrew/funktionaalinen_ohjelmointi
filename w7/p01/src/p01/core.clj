@@ -254,13 +254,24 @@
     (println "Remove which peg? [e]")
     (prompt-move (remove-peg board (letter->pos (get-input "e")))))
   
+  ; T1
   (defn prompt-rows
     []
     (println "How many rows? [5]")
     (let [rows (Integer. (get-input 5))
           board (new-board rows)]
-      (prompt-empty-peg board)))
+        (if (< rows 5) "Board must be larger that 4 rows!"
+      (prompt-empty-peg board))))
   
+  ; T2
+  (defn new-board
+    [rows]
+    (let [initial-board {:rows rows}
+          max-pos (row-tri rows)]
+      (reduce (fn [board pos] (add-pos board max-pos pos))
+          initial-board
+          (range 1 (inc max-pos)))))
+  ;
   
   (defn -main
     [& args]
