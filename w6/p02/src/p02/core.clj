@@ -42,10 +42,10 @@
   
   ; T3
   (def vampire-database
-    {0 {:makes-blood-puns? false, :has-pulse? true  :name "McFishwich"}
-     1 {:makes-blood-puns? false, :has-pulse? true  :name "McMackson"}
-     2 {:makes-blood-puns? true,  :has-pulse? false :name "Damon Salvatore"}
-     3 {:makes-blood-puns? true,  :has-pulse? true  :name "Mickey Mouse"}}
+    {0 {:makes-blood-puns? false, :has-pulse? true  :name "Dr watson"}
+     1 {:makes-blood-puns? false, :has-pulse? true  :name "Mr magoo"}
+     2 {:makes-blood-puns? true,  :has-pulse? false :name "Demon monkey"}
+     3 {:makes-blood-puns? true,  :has-pulse? true  :name "Erkki prkl"}}
   )
   
   (defn insert-vampire 
