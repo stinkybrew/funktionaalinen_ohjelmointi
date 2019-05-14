@@ -111,9 +111,12 @@
 
 ;;;;;;;;;;;;;;;
  ; T4
+ ; Seuraavilla funktioilla tutkitaan siirron kelvollisuutta ja siirretään nappulaa. 
+ ; Ensimmäiset 4 ovat itseään selittäviä. Selitä, miksi ja miten ne toimivat niinkuin on tarkoitus:
 ;;;;;;;;;;;;;;
 
-  (defn pegged?
+  (defn pegged? ; T4.1 | Tämä funktio tarkistaa onko kyseisessä siirrossa "peg"-nappula.
+                ; 
     "Does the position have a peg in it?"
     [board pos]
     (get-in board [pos :pegged]))
@@ -134,17 +137,22 @@
     [board p1 p2]
     (get (valid-moves board p1) p2))
   
-  (defn remove-peg
+  (defn remove-peg ; T4.2 | Funktio poistaa peg:n kyseisestä positiosta, jos/kun toinen pelaaja on siirtänyt oman nappulansa
+                   ; vastustajan yli.
+                   ; Nappula poistetaan pelilaudalta, asettaen arvon "false" kyseiselle kohdalle.
     "Take the peg at given position out of the board"
     [board pos]
     (assoc-in board [pos :pegged] false))
   
-  (defn place-peg
+  (defn place-peg ; T4.3 | Funktio asettaa laidan kyseiselle positiolle nappulan.
+                  ; Nappula asetetaan pelilaudalle tietylle kohdalle, samalla asettaen arvon "true" kyseiselle kohdalle.
     "Put a peg in the board at given position"
     [board pos]
     (assoc-in board [pos :pegged] true))
   
-  (defn move-peg
+  (defn move-peg ; T4.4 | Funktio siirtää nappulaa kohdasta p1 kohtaan p2, jossa plase-peg käyttää ensimmäisenä arvonaan
+                 ; remove-peg funktiota p1 nappulan poistamiselle ja asettamalla kyseiselle kohdalle asettamalla p2 nappulan.
+                 ; 
     "Take peg out of p1 and place it in p2"
     [board p1 p2]
     (place-peg (remove-peg board p1) p2))
