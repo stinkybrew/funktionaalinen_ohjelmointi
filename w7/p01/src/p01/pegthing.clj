@@ -89,8 +89,9 @@
       (reduce (fn [new-board connector] (connector new-board max-pos pos))
               pegged-board
               [connect-right connect-down-left connect-down-right])))
-  
+;;;;;;;;;;;;
   ; T2
+;;;;;;;;;;;;
   (defn new-board
     [rows]
     (let [initial-board {:rows rows}
