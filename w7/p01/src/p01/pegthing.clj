@@ -8,6 +8,7 @@
   ;; Create the board
   ;;;;
 
+;;;;;;;;;;;;;;;;;;;;;
   ; T3
   ;(take 6 tri) hakee luvun kolmioluvun (21)
   ;(last (take 6 tri)) ottaa kolmioluvun (21) rivin 6 lopusta.
@@ -107,6 +108,11 @@
   ;;;;
   ;; Move pegs
   ;;;;
+
+;;;;;;;;;;;;;;;
+ ; T4
+;;;;;;;;;;;;;;
+
   (defn pegged?
     "Does the position have a peg in it?"
     [board pos]
@@ -268,15 +274,17 @@
     (print-board board)
     (println "Remove which peg? [e]")
     (prompt-move (remove-peg board (letter->pos (get-input "e")))))
-  
+
+;;;;;;;;;;;;;;;;
   ; T1
-  (defn prompt-rows
-    []
-    (println "How many rows? [5]")
-    (let [rows (Integer. (get-input 5))
-          board (new-board rows)]
-        (if (>= rows 5) (prompt-empty-peg board) (recur (rows()))
-      )))
+;;;;;;;;;;;;;;;;
+  (defn prompt-rows []
+  (println "How many rows? [5]")
+  (let [rows (Integer. (get-input 5))
+        board (new-board rows)]
+  (if (>= rows 5)
+      (prompt-empty-peg board)
+      (recur))))    
   
   
   (defn -main
