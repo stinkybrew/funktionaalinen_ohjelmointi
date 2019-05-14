@@ -138,8 +138,12 @@
 ;;;;;;;;;;;;;
 
   (def oma-lauta (assoc-in (new-board 5) [4 :pegged] false))  
+    ;;;;;;;;;;;;;
+      ; T5
+    ;;;;;;;;;;;;;
 
-  (defn valid-move?
+  (defn valid-move? ; T5.1 | Funktio tarkistaa onko liikkuminen mahdollista, ottamalla board ja p1 arvojen avulla onko
+                    ; oletettu "paikka vapaa".
     "Return jumped position if the move from p1 to p2 is valid, nil
     otherwise"
     [board p1 p2]
@@ -165,18 +169,21 @@
     [board p1 p2]
     (place-peg (remove-peg board p1) p2))
   
-  (defn make-move
+  (defn make-move ; T5.2 | Funktio valid-move funktio antaa siirrolle mahdollisuuden, make-move toteuttaa siirron peg-nappulalle
+                  ; ja käyttää remove-peg funktiota poistamalla syödun peg-nappulan.
     "Move peg from p1 to p2, removing jumped peg"
     [board p1 p2]
     (if-let [jumped (valid-move? board p1 p2)]
       (move-peg (remove-peg board jumped) p1 p2)))
   
-  (defn can-move?
+  (defn can-move? ; T5.3 | Funktio tarkistaa valid-moves funktion avulla onko nappulalliset positionit "syötävissä".
     "Do any of the pegged positions have valid moves?"
     [board]
     (some (comp not-empty (partial valid-moves board))
           (map first (filter #(get (second %) :pegged) board))))
-  
+
+
+
   ;;;;
   ;; Represent board textually and print it
   ;;;;
@@ -302,6 +309,7 @@
       (prompt-empty-peg board)
       (recur))))    
   
+
   
   (defn -main
     [& args]
