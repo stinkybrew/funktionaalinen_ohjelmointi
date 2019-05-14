@@ -89,6 +89,7 @@
       (reduce (fn [new-board connector] (connector new-board max-pos pos))
               pegged-board
               [connect-right connect-down-left connect-down-right])))
+
 ;;;;;;;;;;;;
   ; T2
 ;;;;;;;;;;;;
@@ -131,7 +132,13 @@
                     (and (not (pegged? board destination))
                          (pegged? board jumped)))
                   (get-in board [pos :connections]))))
-  
+
+;;;;;;;;;;;;;
+  ; T4.5
+;;;;;;;;;;;;;
+
+  (def oma-lauta (assoc-in (new-board 5) [4 :pegged] false))  
+
   (defn valid-move?
     "Return jumped position if the move from p1 to p2 is valid, nil
     otherwise"
