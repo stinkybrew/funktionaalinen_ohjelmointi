@@ -176,12 +176,12 @@
     (if-let [jumped (valid-move? board p1 p2)]
       (move-peg (remove-peg board jumped) p1 p2)))
   
-  (defn can-move? ; T5.3 | Funktio tarkistaa valid-moves funktion avulla onko nappulalliset positionit "syötävissä".
+  (defn can-move? ; T5.3 | Funktio tarkistaa valid-moves funktion avulla onko nappulalliset positionit "syötävissä",
+                  ; suodattamalle pois kohdat mihin ei voi liikkua.
     "Do any of the pegged positions have valid moves?"
     [board]
     (some (comp not-empty (partial valid-moves board))
           (map first (filter #(get (second %) :pegged) board))))
-
 
 
   ;;;;
