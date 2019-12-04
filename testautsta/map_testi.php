@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
 function myfunction($v1,$v2)
@@ -17,6 +14,3 @@ $a2=array("Cow","Dog","Rat");
 print_r(array_map("myfunction",$a1,$a2));
 
 ?>
-
-</body>
-</html>
