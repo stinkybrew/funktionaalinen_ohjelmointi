@@ -1,10 +1,13 @@
+var arvo = 4;
 
-function pow(n) {
+function recur(n) {
     if (n == 1) {
-      return 1;
+        console.log(n);
+        return 1;
     } else {
-      return n * pow(n - 1);
+        console.log(n);
+        return n * recur(n - 1);
     }
 }
 
-console.log( pow(4) ); 
+console.log(recur(arvo));
