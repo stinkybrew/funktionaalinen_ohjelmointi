@@ -1,12 +1,13 @@
 var arvo = 4;
 
-function pow(n) {
+function recur(n) {
     if (n == 1) {
-        console.log(n) // Prints 1
+        console.log(n);
         return 1;
     } else {
-        console.log(n) // Prints all other numbers
-        return n * pow(n - 1);
+        console.log(n);
+        return n * recur(n - 1);
     }
 }
-console.log(pow(arvo));
+
+console.log(recur(arvo));
